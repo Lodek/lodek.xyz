@@ -1,0 +1,95 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+
+a,p,i,.roboto  { 
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    margin-left: 20px;
+    padding-inline-start: 0px;
+}
+
+section {
+    margin: 0 15% 0 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cursed-contacts {
+    text-align: right;
+}
+
+.icon {
+    padding-left: 8px;
+}
+
+.cursed-contact-location {
+    transform: translateX(-2px);
+    padding-left: 12px;
+}
+
+i {
+    padding: 10px;
+}
+
+#links i::before {
+    margin-right: 7px;
+}
+
+section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+    .sections {
+        padding-bottom: 18mm;
+        margin-bottom: 18mm;
+    }
+
+@media print {
+
+    p,a,i{
+        text-decoration: none;
+    }
+
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+
+    section {
+        margin: 0 12% 0 12%;
+    }
+
+    .section-content {
+        margin-top: 10mm;
+        margin-left: 20mm;
+        margin-right: 20mm;
+    }
+
+    .page-break {
+        padding-bottom: 100px;
+    }
+
+}
+
+
+.icons-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+}

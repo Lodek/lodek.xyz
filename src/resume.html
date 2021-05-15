@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://kit.fontawesome.com/9329d8956b.js" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+        <link rel="stylesheet" href="./resume.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Resume - Bruno Gomes</title>
+
+    </head>
+
+    <body>
+        <links-nav id="links"> </links-nav>
+
+        <div class="sections">
+            <section id="intro">
+                <div class="d-flex flex-row justify-content-between align-items-start">
+                    <div>
+                        <h1>BRUNO GOMES</h1>
+                        <h5 style="font-weight: 550">COMPUTER ENGINEER</h5>
+                    </div>
+                    <div class="cursed-contacts d-flex flex-column">
+                        <div> 
+                            +55 41 99535-5799 
+                            <span class="fas fa-phone icon"> </span>
+                        </div>
+                        <div> 
+                            Curitiba - Brazil
+                            <span class="cursed-contact-location fas fa-map-marker-alt icon"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                I'm a Computer Engineer with a wide range of experience in software development.
+                I've written firmwares for memory-constrained embedded systems, batch scripts to automate tasks, daemon services,
+                cloud native web applications, CLI tools leveraging the Linux system libraries and front-end web applications using JS frameworks.
+                Complex and challenging problems are what motivate me, I am not one to back down from a challenge.
+                </p>
+
+                <p>
+                Good development practices are important to me, as are concepts and theory.
+                As such I am knowledgeable about different progamming paradigms (functional, procedural, oop), design patterns, algorithms and data structures and various computer science topics.
+                Despite my technical profile I value clear, concise and transparent communication. I acknowledge the importance of 
+                communication and negotiation in every exchange.
+                </p>
+
+                <p>
+                My career goals are: automate and improve processes; apply engineering practices to design and implement good solutions; expand my knowledge in theoretical computer science, mathematics and software development / engineering.
+                </p>
+
+                <p>
+                Currently I am focusing my efforts towards learning Rust and Operating Systems in order to expand my knowledge regarding high performance systems.
+                </p>
+
+                <p>
+                To see some of my work, visit my <a href="http://github.com/lodek">GitHub</a>.
+                </p>
+            </section>
+
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+
+                <ul class="stuff">
+
+                    <div id="languages">
+                        <skill-item 
+                         v-bind:skills="skills" 
+                         v-bind:category="category"
+                         ></skill-item>
+                    </div>
+
+                    <div id="frameworks">
+                        <skill-item 
+                         v-bind:skills="skills"
+                         v-bind:category="category"
+                         ></skill-item>
+                    </div>
+
+                    <div id="tools">
+                        <skill-item 
+                         v-bind:skills="skills"
+                         v-bind:category="category"
+                         ></skill-item>
+                    </div>
+
+                    <div id="concepts">
+                        <skill-item 
+                         v-bind:skills="skills"
+                         v-bind:category="category"
+                         ></skill-item>
+                    </div>
+                </ul>
+            </section>
+
+            <section id="xp">
+                <h2> Professional Experience</h2>
+                <ul class="list-unstyled prof-exp-list">
+                    <work-exp 
+                    id="azion"
+                    :company="company"
+                    :position="position"
+                    :start-date="startDate"
+                    :end-date="endDate"
+                    :desc="desc"
+                    ></work-exp>
+                    <work-exp 
+                    id="codefiction"
+                    :company="company"
+                    :position="position"
+                    :start-date="startDate"
+                    :end-date="endDate"
+                    :desc="desc"
+                    ></work-exp>
+                    <work-exp 
+                    id="wipro"
+                    :company="company"
+                    :position="position"
+                    :start-date="startDate"
+                    :end-date="endDate"
+                    :desc="desc"
+                    ></work-exp>
+                </ul>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <ul class="list-unstyled">
+                    <accredidation
+                        id="ce"
+                        institution="UNINTER"
+                        name="B.Sc. in Computer Engineering"
+                        date-range="2015-2020"
+                        > </accredidation>
+                    <accredidation
+                        id="phy"
+                        institution="UFPR"
+                        name="B.Sc. in Physics"
+                        date-range="2017-2019 (incomplete)"
+                        > </accredidation>
+                    <accredidation
+                        id="ccp"
+                        institution="Amazon"
+                        name="AWS Certified Cloud Practicioner"
+                        date-range="2020"
+                        reference="https://www.youracclaim.com/badges/3059b7e5-7e1d-43d7-9ddc-52a83694fa5c"
+                        > </accredidation>
+
+                </ul>
+            </section>
+
+            <section id="misc">
+                <h2>Misc</h2>
+                <ul>
+                    <li>
+                        Fluent Portuguese
+                    </li>
+                    <li>
+                        Fluent English
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="./resume.js"></script>
+        <script src="./menu.js"></script>
+    </body>
+
+</html>
