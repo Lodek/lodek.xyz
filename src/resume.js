@@ -54,8 +54,7 @@ Vue.component('work-exp', {
         <h3>{{position}}</h3>
             <i class="far fa-calendar-alt"></i>{{startDate}} - {{endDate}}
             <i class="far fa-building"></i> {{company}}
-            <p :style="content">
-            {{desc}}
+            <p :style="content" v-html="desc">
             </p>
     </li>
     `,
@@ -95,9 +94,7 @@ new Vue({
             'Spring Framework',
             'Django',
             'Django REST Framework',
-            'Bootstrap',
             'Angular',
-            'Angular Material',
             'Linux Programming',
         ],
         category: 'Frameworks & Libs'
@@ -154,7 +151,10 @@ new Vue({
         startDate: 'Nov/2019',
         endDate: 'Jul/2020',
         desc: `
-At wipro I worked with the development of REST apis using Java and Spring; development of front-end web apps using Angular; setup a CI/CD pipeline to containerize a web app and auto-deploy using GitlabCI; developed automated tests using Java and Selenium; developed a MVP interview web app in Django which was standardized as part of the internal interview process.
+At wipro I worked as a fullstack software engineer. During my stay there I: developed Spring Boot based REST APIs; Single Page Application development with Angular; built CI/CD pipelines - from scratch - for a Dockerized Spring Boot app.
+<br>
+I am specially proud about an initiative proposed by my supervisor.
+I prototyped a system to structure the company's interview process which later on was widely adopted by the managers to improve their workflow.
     `
     }
 })
@@ -163,26 +163,21 @@ new Vue({
     el: '#codefiction',
     data: {
         company: 'Code Fiction',
-        position: 'Software Developer',
+        position: 'Software Developer and DevOps Enabler',
         startDate: 'Oct/2020',
         endDate: 'Jan/2020',
         desc: `
-                            Code Fiction is a new company with a limited staff and new projects.
-                            As such, I was responsible for configuring the development environment, staging environment and coding user stories.
-
-                            For the development environment I've configured docker and docker-compose files to ensure consistency among developers.
-                            As for the staging environment, I applied the knowledge I've acquired with my AWS certification to architect a minimal 
-                            - but secure - cloud infrastructure.
-
-                            Futhermore I configured pipelines for different build tools, such as:  Java Maven, Vue and React, thus ensuring that 
-                            CI/CD practices were followed.
-                            The infrastructure stack was: Gitlab for pipeline runners, Terraform for cloud resource provisioning, docker-compose 
-                            as the runtime orchestrator and nginx as a reverse proxy.
-
-                            The development tasks consisted of Java with Spring Boot and Spring MVC for REST APIs. 
-                            Aside from the domain specific development tasks, I implemented Single Sign On functionality for the backend,
-                            which followed the OpenID Connect standard, allowing users to log in using Google and Facebook.
-                                `
+I was part of the first development team at Code Fiction, while they were setting up and stablishing processes.
+I embraced the task of doing the initial setup so the team could start working on the MVP.
+As such I setup CI/CD pipelines and configured our environments such that they followed cloud native practices (container orchestration, gitflow, infrastructure as code).
+This initial setup proved invaluable as it guaranteed the application's consistency accross environments and automated processes which empowered the team to focus on the development tasks.
+The infrastructure stack was: Docker, Terraform, Docker Compose, Gitlab CI, Nginx and AWS services.
+<br>
+Although I worked on establishing processes and spreading the DevOps culture, my main role was still of a Software Developer.
+The development tasks consisted of REST APIs enabled by Spring Boot (Spring MVC) and the code base was architected following DDD practices 
+During that time I implemented a Single Sign One feature which allowed users to login using Google and Facebook.
+The authentication flow made use of the OAuth and OpenID Connect standards.
+`
     }
 })
 
@@ -194,26 +189,19 @@ new Vue({
         startDate: 'Jan/2021',
         endDate: '',
         desc: `
-                            Azion is one of the leading edge computing providers.
-                            Their stack is extensive and cutting edge.
+Azion is one of the leading edge computing providers.
+Their stack is extensive and cutting edge.
 
-                            At Azion I act primarily as a Django developer, coding new features and improvements for 
-                            their main platform.
-
-                            My stay at Azion has been a rich learning experience. Everyday I learn more about what it means to be best in class.
-                            During my time at Azion I have improved my own processes regarding coding, learnt more about designing robust and scalable architectures, 
-                            SRE practices and processes and the list goes on.
-
-                            I am particularly proud of a two problems I've worked on where I was able to leverage my knowledge of Python
-                            features in depth (decorators, metaclasses, namespace particularities) to solve complex problems with as little
-                            code refactor as possible.
-                            One of the problems I worked was to implement a system of object-permission checking in a Django application.
-                            Through Python's decorators, I added behaviors to the Django Queryset class at runtime to execute validations.
-                            The motivation behind that was to enforce mandatory checks were made before executing a query or returning an
-                            object to the calling code, ensuring that the requester has enough permission to perform the operation.
-                            The solution improved the overall code security, but more than that, it did so without requiring a major refactor
-                            in the entire code base, which by now is more than 6 years old.
-                                `
+At Azion I work with Django to maintain the legacy MVC system and code new features using an API first approach following REST practices.
+Although the main system is written in Django, I work on multiple services, some of which are microservices written in pure Python with an RPC interface.
+I continously look to improve the existing monolith, experimenting with different abstractions leveraging Python's more advanced featured (meta programming, context managers, iterators) to improve code readability and reduce repetition.
+I am particularly proud of a problem I've worked on where I was able to leverage my in-depth knowledge of Python to fix a security flaw in our application.
+The solution was proved capable of patching the security issues without refactoring the legacy code.
+Some other tools and languages I use in order to work with our entire stack are: Grafana, Prometheus, Kibana, Puppet, Nginx, Kubernetes, Docker, GitHub Actions and Rust.
+<br>
+At Azion I've seen what it means to be best-in-class.
+My stay has been a rich learning experience and I am proud to have contributed and improved their systems.
+`
     }
 })
 
