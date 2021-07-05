@@ -1,42 +1,25 @@
-Vue.component('skill-item', {
-    props: ['skills', 'category'],
-    template: `
-        <li class="list-unstyled">
-            <h3 :style="categoryStyle"> {{ category }} </h3>
-            <ul class="list-inline">
-                <li 
-                  class="list-inline-item" 
-                  v-for="skill in skills"
-                > {{ skill }} </li>
-            </ul>
-        </li>`,
-    data: function() {
-        return {
-            categoryStyle: {
-                paddingTop: '15px',
-            }
-        }
-    }
-})
-
 Vue.component('accredidation', {
     props: ['institution', 'name', 'dateRange', 'reference'],
     template:
     `
-    <li>
-      <h3> 
+    <li class="d-flex flex-row justify-content-between">
+
+      <div>
           <i class="fas fa-university"></i>
-          {{name}} 
-      </h3>
-      <div :style="nudge">
-          <i class="far fa-building"></i> {{institution}}
-          <i class="far fa-calendar-alt"></i> {{dateRange}}
           <a v-if="reference" :href="reference">
-            <i class="fas fa-certificate text-dark">
-            </i>
-               Validation
+              {{name}} 
           </a>
+          <span v-if="!reference">
+              {{name}} 
+          </span>
+          - 
+        {{institution}}
       </div>
+
+      <div>
+          <div> {{dateRange}} <i class="far fa-calendar-alt"></i> </div>
+      </div>
+
     </li>
     `,
     data: function() {
@@ -49,11 +32,17 @@ Vue.component('accredidation', {
 })
 
 Vue.component('work-exp', {
+    // fix me homie, this was some nasty html
     template: `
     <li>
-        <h3>{{position}}</h3>
-            <i class="far fa-calendar-alt"></i>{{startDate}} - {{endDate}}
-            <i class="far fa-building"></i> {{company}}
+        <div class="d-flex flex-row justify-content-between align-items-center">
+            <div>
+                <h4>{{company}}</h4>
+                <h6><b>{{position}}</b></h6>
+            </div>
+
+            <div> {{startDate}} - {{endDate}} <i class="far fa-calendar-alt"></i> </div>
+        </div>
             <p :style="content" v-html="desc">
             </p>
     </li>
@@ -68,80 +57,6 @@ Vue.component('work-exp', {
     }
 })
 
-new Vue({
-    el: '#languages',
-    data: {
-        skills: [
-            'Python', 
-            'Haskell',
-            'C',
-            'Rust',
-            'Java',
-            'JavaScript',
-            'TypeScript',
-            'HTML/CSS',
-            'SQL',
-            'Shell'
-        ],
-        category: 'Languages'
-    }
-})
-
-new Vue({
-    el: '#frameworks',
-    data: {
-        skills: [
-            'Spring Framework',
-            'Django',
-            'Django REST Framework',
-            'Angular',
-            'Linux Programming',
-        ],
-        category: 'Frameworks & Libs'
-    }
-})
-
-new Vue({
-    el: '#tools',
-    data: {
-        skills: [
-            'Docker',
-            'Docker Compose',
-            'Kubernetes',
-            'AWS',
-            'Unix',
-            'Selenium',
-            'Git',
-            'GNU Make',
-            'Nginx',
-            'LaTeX',
-            'Puppet',
-        ],
-        category: 'Tools'
-    }
-})
-
-new Vue({
-    el: '#concepts',
-    data: {
-        skills: [
-            'DevOps',
-            'Scrum',
-            'Design Patterns',
-            'Functional Programming',
-            'Object Oriented Programming',
-            'MVC Architecture',
-            'REST API',
-            'Test Automation',
-            'Unit Testing',
-            'Relational Databases',
-            'CI/CD',
-            'GitFlow',
-            'Micro Service Architecture',
-        ],
-        category: 'Concepts & Practices'
-    }
-})
 
 new Vue({
     el: '#wipro',
@@ -154,7 +69,7 @@ new Vue({
 At wipro I worked as a fullstack software engineer. During my stay there I: developed Spring Boot based REST APIs; Single Page Application development with Angular; built CI/CD pipelines - from scratch - for a Dockerized Spring Boot app.
 <br>
 I am specially proud about an initiative proposed by my supervisor.
-I prototyped a system to structure the company's interview process which later on was widely adopted by the managers to improve their workflow.
+I prototyped a system to structure the company's interview process, which later on was widely adopted by the managers to improve their workflow.
     `
     }
 })
@@ -174,8 +89,8 @@ This initial setup proved invaluable as it guaranteed the application's consiste
 The infrastructure stack was: Docker, Terraform, Docker Compose, Gitlab CI, Nginx and AWS services.
 <br>
 Although I worked on establishing processes and spreading the DevOps culture, my main role was still of a Software Developer.
-The development tasks consisted of REST APIs enabled by Spring Boot (Spring MVC) and the code base was architected following DDD practices 
-During that time I implemented a Single Sign One feature which allowed users to login using Google and Facebook.
+The development tasks consisted of REST APIs enabled by Spring Boot (Spring MVC) and the code base was architected following DDD practices.
+During that time I implemented a Single Sign On feature which allowed users to login using Google and Facebook.
 The authentication flow made use of the OAuth and OpenID Connect standards.
 `
     }
@@ -194,13 +109,12 @@ Their stack is extensive and cutting edge.
 
 At Azion I work with Django to maintain the legacy MVC system and code new features using an API first approach following REST practices.
 Although the main system is written in Django, I work on multiple services, some of which are microservices written in pure Python with an RPC interface.
-I continously look to improve the existing monolith, experimenting with different abstractions leveraging Python's more advanced featured (meta programming, context managers, iterators) to improve code readability and reduce repetition.
-I am particularly proud of a problem I've worked on where I was able to leverage my in-depth knowledge of Python to fix a security flaw in our application.
-The solution was proved capable of patching the security issues without refactoring the legacy code.
+I continously look to improve the existing monolithic system, experimenting with different abstractions leveraging Python's more advanced featured (meta programming, context managers, iterators) to improve code readability and reduce repetition.<br>
+I am particularly proud of solution I've worked on where I leveraged in-depth knowledge of Python to fix a security flaw in our application.
+The solution proved capable of patching the vulnerability without requiring refactoring the legacy code.
 Some other tools and languages I use in order to work with our entire stack are: Grafana, Prometheus, Kibana, Puppet, Nginx, Kubernetes, Docker, GitHub Actions and Rust.
 <br>
-At Azion I've seen what it means to be best-in-class.
-My stay has been a rich learning experience and I am proud to have contributed and improved their systems.
+At Azion I've seen what it means to be best-in-class and it's been a rich learning experience.
 `
     }
 })

@@ -26,7 +26,7 @@
                 <div class="d-flex flex-row justify-content-between align-items-start">
                     <div>
                         <h1>BRUNO GOMES</h1>
-                        <h5 style="font-weight: 550">COMPUTER ENGINEER</h5>
+                        <h5 style="font-weight: 550">B.Sc. Computer Engineering</h5>
                     </div>
                     <div class="cursed-contacts d-flex flex-column">
                         <div> 
@@ -41,15 +41,20 @@
                 </div>
 
                 <p>
-                I'm a Computer Engineer with a wide range of experience in software development.
-                I've written firmwares for memory-constrained embedded systems, batch scripts to automate tasks, daemon services,
-                cloud native web applications, CLI tools leveraging the Linux system libraries and front-end web applications using JS frameworks.
-                Complex and challenging problems are what motivate me, I am not one to back down from a challenge.
+                I'm a Software Engineer with a wide range of experience in software development.
+                I've written firmwares for memory-constrained embedded systems, batch scripts to automate tasks, daemon services, enterprise software,
+                cloud-native applications, CLI tools leveraging the Linux system libraries and front-end web applications using JS frameworks.
                 </p>
 
                 <p>
-                Good development practices are important to me, as are concepts and theory.
-                As such I am knowledgeable about different progamming paradigms (functional, procedural, oop), design patterns, algorithms and data structures and various computer science topics.
+                I believe there is far more to software than simply writing code.
+                With every project I take part in, my goal is to architect and implement software that delivers in correctness, style and structure.
+                In order to do so, I am careful with my analysis while leveraging theory and good practices.
+                As such I am knowledgeable about different progamming paradigms (functional, procedural, oop), design patterns, algorithms, data structures and various computer science topics.
+                Lastly, I am mindful of the entire software development process which means I understand and value practices such as Domain Driven Development, DevOps culture, Production Readiness, Agile methodologies and try to apply them when appropriate.
+                </p>
+                <!--
+                <p>
                 Despite my technical profile I value clear, concise and transparent communication. I acknowledge the importance of 
                 communication and negotiation in every exchange.
                 </p>
@@ -65,43 +70,23 @@
                 <p>
                 To see some of my work, visit my <a href="http://github.com/lodek">GitHub</a>.
                 </p>
+            -->
+            <p> <b>Technical Skills</b> </p>
+             <p>
+             Languages: Python, Rust, Haskell, C, Java, JavaScript, TypeScript, Shell, SQL, HTML/CSS
+             </p>
+             <p>
+             Frameworks and libs: Django, Spring stack (Boot, MVC, Security, JPA), Angular, Linux Programming
+             </p>
+
+             <p>
+             Tools: Docker, Kubernetes, AWS, Unix, Git, Make, Nginx, Puppet, LaTeX
+             </p>
+             <p>
+             Concepts and practices: DevOps, Scrum, Design Patterns, Software Architecture, Functional Programming, Object Oriented Programming, MVC, REST, Unit Tests, Relational Databases, CI/CD, Git flow, Service Oriented Architecture, OAuth, OpenID Connect
+             </p>
             </section>
 
-
-            <section id="skills">
-                <h2>Technical Skills</h2>
-
-                <ul class="stuff">
-
-                    <div id="languages">
-                        <skill-item 
-                         v-bind:skills="skills" 
-                         v-bind:category="category"
-                         ></skill-item>
-                    </div>
-
-                    <div id="frameworks">
-                        <skill-item 
-                         v-bind:skills="skills"
-                         v-bind:category="category"
-                         ></skill-item>
-                    </div>
-
-                    <div id="tools">
-                        <skill-item 
-                         v-bind:skills="skills"
-                         v-bind:category="category"
-                         ></skill-item>
-                    </div>
-
-                    <div id="concepts">
-                        <skill-item 
-                         v-bind:skills="skills"
-                         v-bind:category="category"
-                         ></skill-item>
-                    </div>
-                </ul>
-            </section>
 
             <section id="xp">
                 <h2> Professional Experience</h2>
@@ -122,6 +107,7 @@
                     :end-date="endDate"
                     :desc="desc"
                     ></work-exp>
+                    <div class="page-break"></div>
                     <work-exp 
                     id="wipro"
                     :company="company"
@@ -161,14 +147,10 @@
 
             <section id="misc">
                 <h2>Misc</h2>
-                <ul>
-                    <li>
-                        Fluent Portuguese
-                    </li>
-                    <li>
-                        Fluent English
-                    </li>
-                </ul>
+                <p>
+                    Fluent Portuguese <br>
+                    Fluent English
+                </p>
             </section>
         </div>
 
