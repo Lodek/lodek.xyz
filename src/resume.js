@@ -148,14 +148,11 @@ new Vue({
         My primary goals are to improve and add new features to their security products (edge firewall and web application firewal).
         The stack is primarily composed of Django, RPC Python services and parts of their infrastructure such as Nginx. 
         Since a fair ammount of the code base is quite old, I continuously look to improve it and create better abstractions to simplify the existing code.
-        <br>
-        I am particularly proud of solution I've worked on where I leveraged in-depth knowledge of Python to fix a security flaw in our application.
-        The solution proved capable of patching the vulnerability without requiring refactoring the legacy code.
 `,
         activities: [
             'Improvements and bugfixes for the existing Django MVC application',
             'Architecting and implementing new endpoints for the security products REST API.',
-            'Proposed several improvements to refactor the old code case.',
+            'Proposed several improvements to refactor the old code base.',
             'Worked with various tools to perform my tasks, such as: Grafana, Puppet, Kibana, Clikchouse, Nginx, Naxsi, Docker, Github Actions',
         ]
     }
