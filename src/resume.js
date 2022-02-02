@@ -97,13 +97,13 @@ new Vue({
         endDate: 'Jul/2020',
         intro: `
             Wipro is a Fortune India 500 company with a large IT service providing department.
-            During my internship I worked as a fullstack software engineer, which significantly strengthened my skills.
+            During my internship I worked as a fullstack software engineer.
             As a highlight of my time there, I prototyped a system to structure the company's techincal interviewing prodecures.
-            The MVP was refined and standardized by the managers as part of the process.
+            The MVP was refined and standardized by the managers as part of the internal process.
         `,
         activities: [
             'Full stack development using Spring Boot for REST APIs and Angular front end.',
-            'Built CI and CD pipelines, from scratch, for Dockerized Java Maven projects and Angular projects.',
+            'Built CI and CD pipelines, from scratch, for Dockerized Maven and Angular projects.',
             'Django development for an MVC application.',
         ]
     }
@@ -118,18 +118,15 @@ new Vue({
         endDate: 'Jan/2020',
         intro: `
         Codefiction is a technology startup company which provides IT services to their clients.
-        While there I worked as a Backend Software Developer, using Spring Boot and helped establish processes.
-        I was part of their first development team and I embraced the task of doing the initial infrastructure setup so that the team could start working on the MVP.
-        As such I setup CI/CD pipelines and configured our environments such that they followed cloud native practices (container orchestration, gitflow, infrastructure as code).
+        I was part of their first project and I embraced the task of doing the initial infrastructure setup so that the team could start working on the MVP.
+        As such I setup CI/CD pipelines and configured our environments such that they followed cloud native practices.
         This initial setup proved invaluable as it guaranteed consistency among team member and environments.
-        Furthermore, it automated processes which empowered the team to focus on the development tasks.
         `,
         activities: [
             'Architecture definition for backend application using DDD.',
             'Development of Backend Enterprise Application REST APIs with Spring Boot.',
-            'Using Spring Security, built a Social Authentication scheme leveraging OAuth and OpenID Connect.',
-            'Setup and provisioning of VPS and deployment automation.',
-            'Configured CI and CD pipelines using: Docker, Terraform, Gitlab CI, Nginx and AWS Services.',
+            'Implemented an OpenID Connect authentication scheme using Spring Security.',
+            'DevOps related tasks such as: CI and CD pipelines, Dockerizing applications, Nginx setup and setup a minimal AWS infrastructure.',
         ]
     }
 })
@@ -142,18 +139,14 @@ new Vue({
         startDate: 'Jan/2021',
         endDate: 'Present',
         intro: `
-        Azion is one of the leading edge computing service providers.
-        Their products are technical in nature such as web-application firewalls, load ballancing and content caching.
-        <br>
-        My primary goals are to improve and add new features to their security products (edge firewall and web application firewal).
-        The stack is primarily composed of Django, RPC Python services and parts of their infrastructure such as Nginx. 
-        Since a fair ammount of the code base is quite old, I continuously look to improve it and create better abstractions to simplify the existing code.
+        Azion is one of the leading edge computing providers with products such as: Web-Application Firewall, Serverless JS FaaS and CDN.
+        I am a member of the Security Products team and have close contact with Azion's Network and Application Firewalls and Digital Certificate Management.
+         The security team stack is extensive, composed of Python, Django, C, Lua, Rust, Go, Nginx, OpenResty and Security domain knowledge such as TLS, PKCS#11, X.509 PKI and OpenSSL.
 `,
         activities: [
-            'Improvements and bugfixes for the existing Django MVC application',
-            'Architecting and implementing new endpoints for the security products REST API.',
-            'Proposed several improvements to refactor the old code base.',
-            'Worked with various tools to perform my tasks, such as: Grafana, Puppet, Kibana, Clikchouse, Nginx, Naxsi, Docker, Github Actions',
+            "Implemented a feature for the Web Application Firewall which scrapes access logs and recommends a configuration to the user. The project leverages Azion's log stream through an ETL approach using Clickhouse. ",
+            "Performed extensive research in order to architect a FIPS 140-2 level 3 compliant Digital Certificate storage solution for Azion's edges. This project required technical depth in Nginx, OpenSSL, TLS protocol and the PKCS#11 standard.",
+            'Regular use of an extensive stack to perform my tasks, such as: Grafana, Puppet, Kibana, Clikchouse, Nginx, Naxsi, Docker, Github Actions, Linux',
         ]
     }
 })
